@@ -1,11 +1,26 @@
 # Companies that use Greenhouse
 
-GREENHOUSE_COMPANIES = [
-    "takealotcom",
-    "canonical",
-    "automattic",
-    "huggingface",
+GREENHOUSE_COMPANIES = {
+    "Takealot": "takealotcom",
+    "Impact.com": "impact",
+    "Luno": "luno",
+    "Ozow": "ozow",
+    "Entersekt": "entersekt",
+}
+
+RECRUITEE_COMPANIES = [
+    "xneelo",
 ]
+# Companies that use Workable
+
+WORKABLE_COMPANIES = {
+    "Electrum": 303874,
+}
+
+ASHBY_COMPANIES = [
+    "luno",
+]
+
 
 # Companies that use Lever
 
@@ -35,8 +50,4 @@ LOCATIONS = [
     "cape town",
     "remote",
     "south africa"
-]
-
-RECRUITEE_COMPANIES = [
-    "xneelo",
 ]

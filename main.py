@@ -3,7 +3,7 @@ from scrapers import (
     scrape_recruitee,
     scrape_greenhouse,
     scrape_lever,
-    scrape_electrum,
+    scrape_workable,
 )
 
 
@@ -43,7 +43,7 @@ def main():
     jobs.extend(scrape_recruitee())
     jobs.extend(scrape_greenhouse())
     jobs.extend(scrape_lever())
-    jobs.extend(scrape_electrum())
+    jobs.extend(scrape_workable())
 
     added = 0
 

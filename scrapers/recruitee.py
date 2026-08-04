@@ -12,7 +12,13 @@ def scrape():
 
     jobs = []
 
+    print("\n========== RECRUITEE ==========")
+
+    total = 0
+
     for company in RECRUITEE_COMPANIES:
+
+        company_count = 0
 
         url = f"https://{company}.recruitee.com/api/offers/"
 
@@ -37,6 +43,9 @@ def scrape():
 
                 if not any(place in location_text for place in LOCATIONS):
                     continue
+
+                company_count += 1
+                total += 1
 
                 jobs.append(
                     Job(
