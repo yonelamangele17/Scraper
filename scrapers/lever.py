@@ -13,7 +13,13 @@ def scrape():
 
     jobs = []
 
+    print("\n========== LEVER ==========")
+
+    total = 0
+
     for company in LEVER_COMPANIES:
+
+        company_count = 0
 
         url = f"https://api.lever.co/v0/postings/{company}?mode=json"
 
@@ -22,6 +28,7 @@ def scrape():
             response = requests.get(url, timeout=15)
 
             if response.status_code != 200:
+                print(f"{company.title():<20}: HTTP {response.status_code}")
                 continue
 
             postings = response.json()
@@ -37,6 +44,9 @@ def scrape():
                 if not any(place in location.lower() for place in LOCATIONS):
                     continue
 
+                company_count += 1
+                total += 1
+
                 jobs.append(
                     Job(
                         company=company.title(),
@@ -50,9 +60,11 @@ def scrape():
                     )
                 )
 
+            print(f"{company.title():<20}: {company_count}")
+
         except Exception as e:
             print(f"{company}: {e}")
 
-    print(f"Lever found {len(jobs)} jobs.")
+    print(f"\nLever Total: {total}\n")
 
     return jobs

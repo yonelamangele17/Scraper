@@ -6,6 +6,7 @@ GREENHOUSE_COMPANIES = {
     "Luno": "luno",
     "Ozow": "ozow",
     "Entersekt": "entersekt",
+    "OfferZen": "Offerzen",
 }
 
 RECRUITEE_COMPANIES = [
@@ -18,7 +19,9 @@ WORKABLE_COMPANIES = {
 }
 
 ASHBY_COMPANIES = [
-    "luno",
+    "anyvan",
+    "cas",
+    "rewst",
 ]
 
 

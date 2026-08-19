@@ -27,6 +27,7 @@ def scrape():
             response = requests.get(url, timeout=20)
 
             if response.status_code != 200:
+                print(f"{company.title():<20}: HTTP {response.status_code}")
                 continue
 
             data = response.json()
@@ -60,9 +61,11 @@ def scrape():
                     )
                 )
 
+            print(f"{company.title():<20}: {company_count}")
+
         except Exception as e:
             print(f"{company}: {e}")
 
-    print(f"Recruitee found {len(jobs)} jobs.")
+        print(f"\nRecruitee Total: {total}\n")
 
     return jobs

@@ -4,6 +4,7 @@ from scrapers import (
     scrape_greenhouse,
     scrape_lever,
     scrape_workable,
+    scrape_ashby,
 )
 
 
@@ -44,6 +45,7 @@ def main():
     jobs.extend(scrape_greenhouse())
     jobs.extend(scrape_lever())
     jobs.extend(scrape_workable())
+    jobs.extend(scrape_ashby())
 
     added = 0
 
